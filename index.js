@@ -14,8 +14,8 @@ Mongoose.connect(DBURL).then(console.log('DB connected successfully'));
 
 Server.use(BodyParser());
 Server.use(Cors());
-Server.use('/api/', User);
-Server.use('/api/', Post);
+Server.use('/api', User);
+Server.use('/api', Post);
 
 Server.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
